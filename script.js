@@ -12,11 +12,69 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+//username variable
+var username;
+
 // initialize database
 const db = firebase.database();
 
 // get user's data
-const username = prompt("Please Tell Us Your Name");
+// const username = prompt("Please Tell Us Your Name");
+
+document.getElementById('dashboard').style.display = "none"
+
+document.getElementById('login').addEventListener('click', GoogleLogin)
+document.getElementById('logout').addEventListener('click', LogoutUser)
+
+let provider = new firebase.auth.GoogleAuthProvider();
+
+function GoogleLogin() {
+  console.log('Login Btn Call')
+  firebase.auth().signInWithPopup(provider).then(res => {
+    console.log(res.user)
+    document.getElementById('LoginScreen').style.display = "none"
+    document.getElementById('dashboard').style.display = "block"
+    showUserDetails(res.user)
+    checkAuthState()
+  }).catch(e => {
+    console.log(e)
+  })
+}
+
+function showUserDetails(user) {
+  document.getElementById('userDetails').innerHTML = `
+          <img src="${user.photoURL}" style="width:10%">
+          <p>Name: ${user.displayName}</p>
+          <p>Email: ${user.email}</p>
+        `
+}
+
+function checkAuthState() {
+  firebase.auth().onAuthStateChanged(user => {
+    if (user) {
+      document.getElementById('LoginScreen').style.display = "none"
+      document.getElementById('dashboard').style.display = "block"
+      document.getElementById('chat').style.display = "block"
+      username = user.displayName;
+      showUserDetails(user)
+    } else {
+      document.getElementById('chat').style.display = "none"
+    }
+  })
+}
+
+function LogoutUser() {
+  console.log('Logout Btn Call')
+  firebase.auth().signOut().then(() => {
+    document.getElementById('LoginScreen').style.display = "block"
+    document.getElementById('dashboard').style.display = "none"
+    document.getElementById('chat').style.display = "none"
+  }).catch(e => {
+    console.log(e)
+  })
+}
+
+checkAuthState()
 
 // submit form
 // listen for submit event on the form and call the postChat function
