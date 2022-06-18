@@ -35,6 +35,7 @@ function GoogleLogin() {
     document.getElementById('LoginScreen').style.display = "none"
     document.getElementById('dashboard').style.display = "block"
     showUserDetails(res.user)
+    checkAuthState()
   }).catch(e => {
     console.log(e)
   })
