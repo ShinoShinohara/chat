@@ -1,0 +1,86 @@
+:root {
+    --rosa-claro: #DEBBBB;
+    --verde-claro: #FFFFF9;
+    --vermelho: #E48E8E;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--verde-claro);
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 400px;
+}
+
+main h1 {
+    font-weight: 600;
+    font-size: 0.938rem;
+
+    border-bottom: 3px solid var(--rosa-claro);
+    padding-bottom: 8px;
+}
+
+label {
+    display: block;
+
+    font-size: 0.875rem;
+    font-weight: 300;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    height: 35px;
+
+    background-color: transparent;
+    border: 1px solid var(--vermelho);
+
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+
+    width: 100%;
+    height: 40px;
+
+    margin-top: 15px;
+
+    background-color: var(--vermelho);
+    border: 1px solid var(--vermelho);
+    color: white;
+
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.logar-google {
+    width: 100%;
+    text-align: center;
+}
+
+form a {
+    font-size: 14px;
+    font-weight: 300;
+
+    display: block;
+    margin-top: 30px;
+
+    color: black;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Sofro UFMS - CHAT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
+
+    <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
+</head>
+<body>
+    <header id="box-top"></header>
+
+    <main>
+        <section id="box-contacts">
+            <form action="#">
+                <button type="submit">
+                    <i class="fa-solid fa-user-plus"></i>
+                </button>
+                <input type="number" name="contato" id="contato">
+            </form>
+            
+            <div id="contacts">
+                <ul>
+                    <li class="user active">
+                        <div class="avatar"></div>
+                        <div class="user-info">
+                            <p class="name">Amareloww</p>
+                            <p class="status verde">online</p>
+                        </div>
+                    </li>
+                    <li class="user selected">
+                        <div class="avatar"></div>
+                        <div class="user-info">
+                            <p class="name">Ramom Lino</p>
+                            <p class="status verde">online</p>
+                        </div>
+                    </li>
+                    <li class="user">
+                        <div class="avatar"></div>
+                        <div class="user-info">
+                            <p class="name">Luck Boquinha de Mel</p>
+                            <p class="status red">online</p>
+                        </div>
+                    </li>
+                    <li class="user">
+                        <div class="avatar"></div>
+                        <div class="user-info">
+                            <p class="name">Pedriiin O Galã</p>
+                            <p class="status verde">online</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="chat">
+            <div class="no-clicked none">
+                <i class="fa-solid fa-comments"></i>
+                <p><strong>SOFRO UFMS</strong> CHAT</p>
+            </div>
+            
+            <div class="clicked">
+                <div class="box-user">
+                    <div class="avatar"></div>
+                    <div class="user-info">
+                        <p class="name">SOFRO UFMS - CHAT</p>
+                        <p class="status verde">online</p>
+                    </div>
+                </div>
+
+                <div id="messages"></div>
+
+                <form id="form" class="form">
+                    <button type="submit">
+                        <i class="fa-solid fa-message"></i>
+                    </button>
+                    <input type="text" name="mensagem" id="mensagem" placeholder="Mensagem...">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <a id="logout" href="#">Sair</a>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="assets/js/chat.js"></script>
+</body>
+</html>
