@@ -94,11 +94,11 @@ function sendMessage(e) {
 
   //auto scroll to bottom
   document
-    .getElementById("messages")
+    .getElementById("salve")
     .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 
   // create db collection and send in the data
-  db.ref("messages/" + timestamp).set({
+  db.ref("salve/" + timestamp).set({
     username,
     message,
   });
@@ -106,13 +106,13 @@ function sendMessage(e) {
 
 // display the messages
 // reference the collection created earlier
-const fetchChat = db.ref("messages/");
+const fetchChat = db.ref("salve/");
 
 // check for new messages using the onChildAdded event listener
 fetchChat.on("child_added", function (snapshot) {
   const messages = snapshot.val();
-  const message = `<li class=${username === messages.username ? "sent" : "receive"
-    }><span>${messages.username}: </span>${messages.message}</li>`;
+  const message = `<li class=${username === salve.username ? "sent" : "receive"
+    }><span>${salve.username}: </span>${salve.message}</li>`;
   // append the message on the page
-  document.getElementById("messages").innerHTML += message;
+  document.getElementById("salve").innerHTML += message;
 });
