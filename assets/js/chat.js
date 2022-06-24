@@ -45,7 +45,7 @@ document.getElementById("logout").addEventListener("click", LogoutUser);
 function checkAuthState() {
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = "http://localhost/sistdist/index.html";
+            window.location.href = "index.html";
         } else {
             const dados = JSON.parse(window.sessionStorage.getItem("user_chat"));
             console.log(dados);
