@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --rosa-claro: #DEBBBB;
     --verde-claro: #FFFFF9;
     --cinza-claro: #f5f5f5;
@@ -8,7 +8,21 @@
     --vermelho: #df3b3b;
     --azul: #096AD9;
     --gray: #999999;
+} */
+
+:root {
+    --rosa-claro: #7289da;
+    --verde-claro: #424549;
+    --cinza-claro: #36393e;
+    --verde: #7CD074;
+    --verde-intermed: #7289da;
+    --branco: #1e2124;
+    --vermelho: #7289da;
+    --azul: #096AD9;
+    --gray: #282b30;
 }
+
+.p {}
 
 * {
     padding: 0;
@@ -18,6 +32,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--verde-claro);
+    color: rgb(216, 216, 216);
 
     overflow-y: hidden;
 }
@@ -26,12 +41,12 @@ body {
 ::-webkit-scrollbar {
     width: 4px;
 }
-  
+
 ::-webkit-scrollbar-track {
     background: transparent;
     padding: 2px;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     background-color: var(--rosa-claro);
 }
@@ -45,19 +60,20 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--rosa-claro);
+    /* border: 1px solid var(--rosa-claro); */
 
     font-weight: 300;
     font-size: 0.75rem;
 }
 
-#box-top strong {
+/* #box-top strong {
     font-weight: 700;
-}
+} */
 
 main {
     width: 80%;
-    height: 555px; /*calc(100vh - 145px);*/
+    height: 555px;
+    /*calc(100vh - 145px);*/
 
     margin: 0 10%;
 
@@ -131,21 +147,28 @@ main {
     box-sizing: border-box;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 30px;
 
-    cursor: pointer;
+    /* cursor: pointer; */
+}
+
+.name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .user.selected {
     padding-top: 10px;
     padding-bottom: 10px;
     box-sizing: border-box;
-    
+
     background-color: var(--cinza-claro);
 }
 
-.user.selected > .user-info p.name {
+.user.selected>.user-info p.name {
     color: #ff8818;
 }
 
@@ -162,13 +185,12 @@ main {
     background-color: var(--azul);
 }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-
+/* .avatar {
+    width: 40%;
+    align-items: center;
     border-radius: 50%;
     background-color: #e2e2e2;
-}
+} */
 
 .user-info p.name {
     font-size: 0.875rem;
@@ -286,7 +308,7 @@ main {
 
 .message {
     width: 40%;
-    
+
     font-weight: 400;
 
     padding: 15px 20px;
@@ -299,6 +321,12 @@ main {
     font-size: 0.75rem;
 
     border-radius: 10px;
+}
+
+.username {
+    color: blue;
+    font-style: italic;
+    font-weight: 700;
 }
 
 .my-message {
