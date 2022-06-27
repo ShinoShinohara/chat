@@ -35,9 +35,7 @@ firebase.initializeApp(firebaseConfig);
 // Inicializa o banco de dados
 const db = firebase.database();
 
-
 let provider = new firebase.auth.GoogleAuthProvider();
-
 
 document.getElementById("logout").addEventListener("click", LogoutUser);
 
@@ -57,6 +55,7 @@ function checkAuthState() {
           border-radius: 50%;
           background-color: #e2e2e2;">`;
             document.getElementById('name').innerHTML = `<p>${user.displayName}</p> `;
+            // document.getElementById('avatar').innerHTML = ` <p>${user.email}</p>`
         }
     });
 }
@@ -115,11 +114,12 @@ fetchChat.on("child_added", function (snapshot) {
     const messages = snapshot.val();
     const username = JSON.parse(sessionStorage.getItem("user_chat")).username;
     const date = new Date(messages.timestamp);
-    const datePerson = date.getDate()+ "/"+ (date.getMonth()+1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    const datePerson = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-    const message = 
+    const message =
         `
         <div class="message ${username === messages.username ? "my-message" : "from-message"}">
+        <div class="username">${messages.username}</div>
             <div class="content">${messages.message}</div>
             <div class="date">${datePerson}</div>
         </div>
@@ -127,3 +127,4 @@ fetchChat.on("child_added", function (snapshot) {
     // append the message on the page
     document.getElementById("messages").innerHTML += message;
 });
+
