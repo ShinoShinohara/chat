@@ -50,10 +50,12 @@ function checkAuthState() {
             // document.querySelector("#box-top").innerHTML =
             //     `<p>Envie seu código <strong>"${dados.uid}"</strong> para outros membros te adicionarem.</p>`;
             document.getElementById('avatar').innerHTML = `
-          <img src="${user.photoURL}" style="width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          background-color: #e2e2e2;">`;
+          <img src="${user.photoURL}" style="width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;">`;
             document.getElementById('name').innerHTML = `<p>${user.displayName}</p> `;
             // document.getElementById('avatar').innerHTML = ` <p>${user.email}</p>`
         }
