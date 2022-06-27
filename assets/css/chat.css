@@ -45,15 +45,15 @@ body {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--rosa-claro);
+    /* border: 1px solid var(--rosa-claro); */
 
     font-weight: 300;
     font-size: 0.75rem;
 }
 
-#box-top strong {
+/* #box-top strong {
     font-weight: 700;
-}
+} */
 
 main {
     width: 80%;
@@ -307,7 +307,7 @@ main {
     margin-left: auto;
 
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .from-message {

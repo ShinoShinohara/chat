@@ -49,8 +49,14 @@ function checkAuthState() {
         } else {
             const dados = JSON.parse(window.sessionStorage.getItem("user_chat"));
             console.log(dados);
-            document.querySelector("#box-top").innerHTML = 
-                `<p>Envie seu código <strong>"${dados.uid}"</strong> para outros membros te adicionarem.</p>`;
+            // document.querySelector("#box-top").innerHTML =
+            //     `<p>Envie seu código <strong>"${dados.uid}"</strong> para outros membros te adicionarem.</p>`;
+            document.getElementById('avatar').innerHTML = `
+          <img src="${user.photoURL}" style="width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #e2e2e2;">`;
+            document.getElementById('name').innerHTML = `<p>${user.displayName}</p> `;
         }
     });
 }
