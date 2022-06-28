@@ -34,7 +34,8 @@ function checkAuthState() {
             border-radius: 50%;
             display: block;
             margin-left: auto;
-            margin-right: auto;">`;
+            margin-right: auto;
+            border: 2px solid rgb(33, 33, 33);">`;
             document.getElementById('name').innerHTML = `<p>${user.displayName} !</p> `;
         }
     });
