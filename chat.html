@@ -22,37 +22,42 @@
 
     <main>
         <section id="box-contacts">
-            <!-- <form action="#">
-                <button type="submit">
-                    <i class="fa-solid fa-user-plus"></i>
-                </button>
-                <input type="number" name="contato" id="contato">
-            </form> -->
-            <h2 style="display: block;margin-left: auto;margin-right: auto;">Perfil do Usuário</h2>
+            <h1 style="display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.5rem;
+            font-weight: 500;">
+                Seja muito bem vindo,</h1>
 
             <div id="contacts">
                 <ul>
-                    <!-- <li class="user"> -->
-                    <div id="avatar"></div>
-
                     <p id="name" class="name"></p>
-                    <!-- <p class="status verde">online</p> -->
-
+                    <div id="avatar"></div>
                     </li>
                 </ul>
             </div>
+            <a id="logout" href="#" style="display: block;
+                margin-left: auto;
+                margin-right: auto; 
+                padding-top: 50px;">
+                Sair</a>
         </section>
 
-        <section id="chat">
+        <section id="chat" style="width: 70%;
+        background-color: #363636;
+        background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&w=1000&q=80');
+        min-height: 100%;
+        background-repeat: repeat;
+        background-size: cover;">
             <div class="clicked">
                 <div class="box-user">
                     <div><img src="https://i.imgur.com/QEH8y7h.jpg" style="width: 50px;
-          height: 50px;
-          border-radius: 50%;"></div>
+                    height: 50px;
+                    border-radius: 50%;"></div>
                     <div class="user-info">
                         <p style="font-size: 1.5rem">Chat - Sistemas Distribuídos</p>
-                        <p style="font-size: 0.9rem; padding-top: 10px;">Venha tirar dúvidas com seus colegas de classe
-                            &#128516</p>
+                        <p style="font-size: 0.9rem; padding-top: 10px;">
+                            Venha tirar dúvidas com seus colegas de classe &#128516</p>
                     </div>
                 </div>
 
@@ -67,8 +72,6 @@
             </div>
         </section>
     </main>
-
-    <a id="logout" href="#">Sair</a>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>

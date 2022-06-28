@@ -13,7 +13,7 @@
 :root {
     --rosa-claro: #7289da;
     --verde-claro: #424549;
-    --cinza-claro: #36393e;
+    --cinza-claro: #282b30;
     --verde: #7CD074;
     --verde-intermed: #7289da;
     --branco: #1e2124;
@@ -156,6 +156,8 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1.3rem;
+    font-style: italic;
 }
 
 .user.selected {
@@ -231,6 +233,12 @@ main {
 
 #chat {
     width: 70%;
+    /* background-color: var(--cinza-claro); */
+    background-color: #363636;
+    background-image: url('assets/jCtmIfT.jpg');
+    min-height: 100%;
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 .no-clicked {
@@ -283,6 +291,7 @@ main {
     align-items: center;
     gap: 30px;
 
+    background-color: var(--branco);
     border-bottom: 1px solid var(--cinza-claro);
 }
 
@@ -316,7 +325,7 @@ main {
     flex-direction: column;
     gap: 10px;
 
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 
     border-radius: 10px;
 }
@@ -337,14 +346,15 @@ main {
 }
 
 .from-message {
-    background-color: var(--cinza-claro);
+    background-color: var(--branco);
 
     display: flex;
     align-items: flex-start;
 }
 
 .date {
-    color: var(--gray);
+    /* color: var(--gray); */
+    color: aliceblue;
     font-size: 0.625rem;
 }
 
@@ -358,7 +368,7 @@ main {
 
     position: absolute;
 
-    bottom: 40px;
+    bottom: 20px;
 }
 
 #chat .form button {
