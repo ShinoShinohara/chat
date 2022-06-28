@@ -1,22 +1,3 @@
-/*
-
-    <li class="user active">
-        <div class="avatar"></div>
-        <div class="user-info">
-            <p class="name">Amareloww</p>
-            <p class="status verde">online</p>
-        </div>
-    </li>
-    <li class="user selected">
-        <div class="avatar"></div>
-        <div class="user-info">
-            <p class="name">Ramom Lino</p>
-            <p class="status verde">online</p>
-        </div>
-    </li>
-
-*/
-
 // Constantes de configuração
 var firebaseConfig = {
     apiKey: "AIzaSyDVwz1xQ1oH8JmvDknHm0fi-fcQRwUE5Yk",
@@ -47,17 +28,15 @@ function checkAuthState() {
         } else {
             const dados = JSON.parse(window.sessionStorage.getItem("user_chat"));
             console.log(dados);
-            // document.querySelector("#box-top").innerHTML =
-            //     `<p>Envie seu código <strong>"${dados.uid}"</strong> para outros membros te adicionarem.</p>`;
             document.getElementById('avatar').innerHTML = `
           <img src="${user.photoURL}" style="width: 150px;
             height: 150px;
             border-radius: 50%;
             display: block;
             margin-left: auto;
-            margin-right: auto;">`;
-            document.getElementById('name').innerHTML = `<p>${user.displayName}</p> `;
-            // document.getElementById('avatar').innerHTML = ` <p>${user.email}</p>`
+            margin-right: auto;
+            border: 2px solid rgb(33, 33, 33);">`;
+            document.getElementById('name').innerHTML = `<p>${user.displayName} !</p> `;
         }
     });
 }
