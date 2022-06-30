@@ -1,49 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Chat - Sistemas Distribuídos</title>
+    <title>Sofro UFMS - LOG IN</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/index.css">
 
     <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
-    <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
+<body>
+    <main>
+        <h1>Sofro UFMS - Log In</h1>
+        
+        <form action="#" method="post">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
 
-<body style="background-color:#424549 ;">
-    <main style="background-color:#424549 ;">
-        <h1>Chat- Sistemas Distribuídos</h1>
-        <div><img src="https://i.imgur.com/QEH8y7h.jpg" style="width: 150px;
-                  height: 150px;
-                  border-radius: 50%;display: block;background-color: #424549;
-    margin-left: auto;
-    margin-right: auto;padding-top: 50px;padding-bottom: 50px;"></div>
-        <p style="font-size: 1.0rem;display: block;text-align: center;
-   color: whitesmoke;
-    padding-bottom: 16px;">Venha tirar dúvidas com seus colegas de classe
-            &#128516</p>
-        <div class="logar-google">
-            <button type="button" style="
-            border-radius: 8px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border: none;
-  color: whitesmoke;
-  background-color: #7289da;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-" id="login" href="#">Entrar com o Google</button>
-        </div>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha">
+
+            <input type="submit" value="Entrar no sistema">
+            
+            <div class="logar-google">
+                <a id="login" href="#">Entrar com o Google</a>
+            </div>
+        </form>
     </main>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
@@ -51,5 +37,4 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
-
 </html>
