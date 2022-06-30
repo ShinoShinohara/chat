@@ -29,10 +29,10 @@ function GoogleLogin() {
         .signInWithPopup(provider)
         .then((res) => {
             checkAuthState();
-      })
-      .catch((e) => {
-          console.log(e);
-      });
+        })
+        .catch((e) => {
+            console.log(e);
+        });
 }
 
 function checkAuthState() {
@@ -42,8 +42,8 @@ function checkAuthState() {
                 "username": user.displayName,
                 "uid": user.uid
             }
-            sessionStorage.setItem('user_chat', JSON.stringify(dados));
-            window.location.href = "chat.html";
+            localStorage.setItem('user_chat', JSON.stringify(dados));
+            window.location.href = "http://localhost/sistdist/chat.html";
         }
     });
 }
