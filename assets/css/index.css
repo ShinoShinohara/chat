@@ -9,16 +9,6 @@
     margin: 0;
 }
 
-.button {
-    transition-duration: 0.4s;
-}
-
-.button:hover {
-    background-color: #4CAF50;
-    /* Green */
-    color: white;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--verde-claro);
@@ -32,21 +22,15 @@ body {
 }
 
 main {
-    /* width: 100%; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 400px;
 }
 
 main h1 {
-    font-weight: 900;
-    font-size: 2.0rem;
-    color: whitesmoke;
-    padding-bottom: 10px;
-    /* padding-bottom: 200px; */
+    font-weight: 600;
+    font-size: 0.938rem;
 
-    /* border-bottom: 3px solid var(--rosa-claro); */
-    /* padding-bottom: 8px; */
+    border-bottom: 3px solid var(--rosa-claro);
+    padding-bottom: 8px;
 }
 
 label {
