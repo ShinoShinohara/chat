@@ -12,13 +12,21 @@
     <link rel="stylesheet" href="assets/css/chat.css">
 
     <link rel="stylesheet" href="assets/css/fontawesome/css/all.min.css">
-    <link rel="icon" type="image/svg" href="assets/icon.svg">
 </head>
 <body>
     <main>
         <section id="box-channels">
+            <div id="profile">
+                <div id="photo"></div>
+                <div id="name">
+                    <p></p>
+                </div>
+            </div>
+
             <div class="channel hover" onclick="modifyContent()">
-                <div class="channel-avatar"></div>
+                <div class="channel-avatar">
+                    <img src="assets/images/capivaraufms2.png" alt="Avatar do canal">
+                </div>
                 <div class="channel-info">
                     <p class="name">SOFRO UFMS - CHAT</p>
                 </div>
@@ -38,7 +46,9 @@
             
             <div id="clicked" class="clicked none">
                 <div class="channel">
-                    <div class="channel-avatar"></div>
+                    <div class="channel-avatar">
+                        <img src="assets/images/capivaraufms2.png" alt="Avatar do canal">
+                    </div>
                     <div class="channel-info">
                         <p class="name">SOFRO UFMS - CHAT</p>
                     </div>
