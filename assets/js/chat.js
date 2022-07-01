@@ -51,7 +51,7 @@ listRef.on("value", function(snap) {
         document.querySelector(".users-online ul").innerHTML += userBox;
     }
 
-    console.log("# of online users = " + snap.numChildren());
+    //console.log("# of online users = " + snap.numChildren());
 });  
 
 
@@ -70,12 +70,19 @@ function modifyContent() {
         item.classList.remove("none");
         document.querySelector("#no-clicked").classList.add("none");
     }
+
+    var objDiv = document.querySelector("#messages");
+    objDiv.scrollTop = objDiv.scrollHeight;
 }
 
 function checkAuthState() {
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = "index.html";
+            window.location.href = "http://localhost/sistdist/index.html";
+        }
+        else {
+            document.getElementById('photo').innerHTML = `<img src="${user.photoURL}" alt="Avatar do usuário">`;
+            document.getElementById('name').innerHTML = `<p>${user.displayName}</p> `
         }
     });
 }
@@ -135,11 +142,18 @@ fetchChat.on("child_added", function (snapshot) {
     const username = JSON.parse(localStorage.getItem("user_chat")).username;
     const date = new Date(messages.timestamp);
     const datePerson = date.getDate()+ "/"+ (date.getMonth()+1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    
+    let nome = messages.username.toLowerCase().replace(/(?:^|\s)\S/g, function(a) {
+        return a.toUpperCase();
+    });
+    const nomeFormatado = nome.split(" ");
+
 
     const message = 
         `
         <div class="message ${username === messages.username ? "my-message" : "from-message"}">
-            <div class="content">${messages.message}</div>
+            <div class="author">${nomeFormatado[0] + " " + nomeFormatado[1]}</div>
+            <div class="content"><p>${messages.message}</p></div>
             <div class="date">${datePerson}</div>
         </div>
         `;

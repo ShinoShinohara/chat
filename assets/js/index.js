@@ -43,7 +43,7 @@ function checkAuthState() {
                 "uid": user.uid
             }
             localStorage.setItem('user_chat', JSON.stringify(dados));
-            window.location.href = "chat.html";
+            window.location.href = "http://localhost/sistdist/chat.html";
         }
     });
 }
