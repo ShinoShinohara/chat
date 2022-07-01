@@ -78,7 +78,7 @@ function modifyContent() {
 function checkAuthState() {
     firebase.auth().onAuthStateChanged((user) => {
         if (!user) {
-            window.location.href = "http://localhost/sistdist/index.html";
+            window.location.href = "index.html";
         }
         else {
             document.getElementById('photo').innerHTML = `<img src="${user.photoURL}" alt="Avatar do usuário">`;
