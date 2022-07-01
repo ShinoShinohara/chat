@@ -53,6 +53,8 @@ main {
 
     border: 1px solid var(--cinza-claro);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+
+    overflow-y: auto;
 }
 
 #box-channels {
@@ -67,6 +69,25 @@ main {
     border-right: 1px solid var(--cinza-claro);
 
     overflow-y: auto;
+}
+
+#profile {
+    width: 100%;
+    padding: 0 12%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#photo img {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
 }
 
 .channel {
@@ -122,6 +143,12 @@ main {
 
     border-radius: 50%;
     background-color: #e2e2e2;
+}
+
+.channel-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 .channel-info p.name {
@@ -268,15 +295,31 @@ main {
 
     margin-left: auto;
 
-    display: flex;
     align-items: flex-end;
 }
 
 .from-message {
     background-color: var(--cinza-claro);
 
-    display: flex;
     align-items: flex-start;
+}
+
+.content {
+    width: 100%;
+
+    line-height: 20px;
+
+    overflow-wrap: break-word;
+}
+
+.my-message .content, .my-message .date, .my-message .author {
+    align-self: flex-start;
+}
+
+.author {
+    color: var(--vermelho);
+    font-size: 0.75rem;
+    font-weight: 700;
 }
 
 .date {

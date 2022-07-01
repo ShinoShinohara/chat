@@ -33,32 +33,15 @@ main h1 {
     padding-bottom: 8px;
 }
 
-label {
-    display: block;
-
-    font-size: 0.875rem;
-    font-weight: 300;
-
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-
-input {
-    width: 100%;
-    height: 35px;
-
-    background-color: transparent;
-    border: 1px solid var(--vermelho);
-
-    padding: 5px 10px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    cursor: pointer;
+.logar-google a {
+    text-decoration: none;
 
     width: 100%;
     height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     margin-top: 15px;
 
@@ -66,21 +49,6 @@ input[type="submit"] {
     border: 1px solid var(--vermelho);
     color: white;
 
-    font-size: 13px;
-    font-weight: 300;
-}
-
-.logar-google {
-    width: 100%;
-    text-align: center;
-}
-
-form a {
     font-size: 14px;
     font-weight: 300;
-
-    display: block;
-    margin-top: 30px;
-
-    color: black;
 }
